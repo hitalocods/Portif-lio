@@ -2,18 +2,28 @@
 
 /* Variáveis CSS para Cores (Tema Escuro Profissional) */
 :root {
-    --primary-color: #00bcd4;     /* Azul Turquesa Profissional (mais sóbrio que o ciano vibrante) */
-    --secondary-color: #61dafb;   /* Azul claro para detalhes, como hover */
-    --text-primary: #e0e0e0;      /* Texto principal claro */
-    --text-secondary: #a0a0a0;    /* Texto secundário e de descrições */
-    --bg-dark: #121212;           /* Fundo principal super escuro */
-    --bg-medium: #1e1e1e;         /* Fundo para seções ou cards */
-    --bg-light: #2c2c2c;          /* Fundo para elementos de destaque */
-    --border-color: #333333;      /* Bordas sutis */
-    --accent-glow: rgba(0, 188, 212, 0.3); /* Brilho sutil para hover/foco */
+    --primary-color: #00bcd4;
+    /* Azul Turquesa Profissional (mais sóbrio que o ciano vibrante) */
+    --secondary-color: #61dafb;
+    /* Azul claro para detalhes, como hover */
+    --text-primary: #e0e0e0;
+    /* Texto principal claro */
+    --text-secondary: #a0a0a0;
+    /* Texto secundário e de descrições */
+    --bg-dark: #121212;
+    /* Fundo principal super escuro */
+    --bg-medium: #1e1e1e;
+    /* Fundo para seções ou cards */
+    --bg-light: #2c2c2c;
+    /* Fundo para elementos de destaque */
+    --border-color: #333333;
+    /* Bordas sutis */
+    --accent-glow: rgba(0, 188, 212, 0.3);
+    /* Brilho sutil para hover/foco */
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --max-content-width: 1200px; /* Largura máxima para o conteúdo central */
+    --max-content-width: 1200px;
+    /* Largura máxima para o conteúdo central */
 }
 
 /* Reset Básico e Fontes */
@@ -24,7 +34,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Rolagem suave para navegação */
+    scroll-behavior: smooth;
+    /* Rolagem suave para navegação */
 }
 
 body {
@@ -35,7 +46,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--primary-color);
     line-height: 1.2;
@@ -57,7 +73,8 @@ a:hover {
 .container {
     max-width: var(--max-content-width);
     margin: 0 auto;
-    padding: 0 25px; /* Espaçamento lateral */
+    padding: 0 25px;
+    /* Espaçamento lateral */
 }
 
 /* --- Navegação e Cabeçalho --- */
@@ -68,15 +85,18 @@ a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     /* Removido: position: sticky; */
     /* Removido: top: 0; */
-    z-index: 1000; /* Manter o z-index para garantir que a navegação esteja acima de outros elementos se houver sobreposição */
-    width: 100%; /* Garante que o header ocupe toda a largura */
+    z-index: 1000;
+    /* Manter o z-index para garantir que a navegação esteja acima de outros elementos se houver sobreposição */
+    width: 100%;
+    /* Garante que o header ocupe toda a largura */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 25px; /* Ajuste de padding para o navbar */
+    padding: 20px 25px;
+    /* Ajuste de padding para o navbar */
     max-width: var(--max-content-width);
     margin: 0 auto;
 }
@@ -107,7 +127,8 @@ a:hover {
     color: var(--primary-color);
 }
 
-.nav-links a::after { /* Linha de destaque no hover/ativo */
+.nav-links a::after {
+    /* Linha de destaque no hover/ativo */
     content: '';
     position: absolute;
     left: 0;
@@ -124,7 +145,8 @@ a:hover {
 }
 
 .hamburger {
-    display: none; /* Escondido por padrão em telas maiores */
+    display: none;
+    /* Escondido por padrão em telas maiores */
     background: none;
     border: none;
     cursor: pointer;
@@ -145,9 +167,11 @@ a:hover {
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
+
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
@@ -155,9 +179,11 @@ a:hover {
 /* --- Hero Section (Primeira seção após o cabeçalho) --- */
 .hero-section {
     background: linear-gradient(135deg, var(--bg-dark) 0%, #0a0a0a 100%);
-    padding: 80px 25px; /* Padding interno */
+    padding: 80px 25px;
+    /* Padding interno */
     text-align: center;
-    min-height: 70vh; /* Altura mínima */
+    min-height: 70vh;
+    /* Altura mínima */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,16 +192,19 @@ a:hover {
 
 .hero-content-wrapper {
     display: flex;
-    flex-direction: column; /* Empilha em mobile, depois lado a lado */
+    flex-direction: column;
+    /* Empilha em mobile, depois lado a lado */
     align-items: center;
     text-align: center;
     gap: 30px;
-    max-width: 800px; /* Limita a largura do conteúdo hero */
+    max-width: 800px;
+    /* Limita a largura do conteúdo hero */
     margin: 0 auto;
 }
 
 .hero-image img {
-    width: 180px; /* Tamanho da foto do perfil */
+    width: 180px;
+    /* Tamanho da foto do perfil */
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
@@ -190,7 +219,8 @@ a:hover {
 }
 
 .hero-info h1 {
-    font-size: 3.5em; /* Nome com tamanho adequado */
+    font-size: 3.5em;
+    /* Nome com tamanho adequado */
     color: var(--text-primary);
     margin-bottom: 8px;
     letter-spacing: 1.5px;
@@ -215,9 +245,25 @@ a:hover {
     transform: translateY(-3px);
 }
 
+/* Destaque para universidade na hero */
+.university {
+    margin: 10px 0 0 0;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.university i {
+    font-size: 1.1em;
+}
+
 /* --- Seções Gerais --- */
 .main-content {
-    background-color: var(--bg-medium); /* Fundo para a área principal de conteúdo */
+    background-color: var(--bg-medium);
+    /* Fundo para a área principal de conteúdo */
 }
 
 .section-padded {
@@ -227,7 +273,8 @@ a:hover {
 }
 
 .section-dark {
-    background-color: var(--bg-dark); /* Alterna o fundo das seções */
+    background-color: var(--bg-dark);
+    /* Alterna o fundo das seções */
 }
 
 .section-header {
@@ -267,7 +314,8 @@ a:hover {
 .content-center {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center; /* Centraliza o texto dentro */
+    text-align: center;
+    /* Centraliza o texto dentro */
 }
 
 .content-center p {
@@ -317,12 +365,15 @@ a:hover {
     font-size: 1em;
     color: var(--text-secondary);
     margin-bottom: 8px;
-    padding-left: 25px; /* Espaço para o ícone */
+    padding-left: 25px;
+    /* Espaço para o ícone */
     position: relative;
 }
 
-.skill-category li::before { /* Ícone de check */
-    content: '\f058'; /* Código do Font Awesome para check-circle */
+.skill-category li::before {
+    /* Ícone de check */
+    content: '\f058';
+    /* Código do Font Awesome para check-circle */
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: var(--primary-color);
@@ -395,7 +446,8 @@ a:hover {
     position: relative;
 }
 
-.experience-item ul li .fas { /* Ícone de check para li */
+.experience-item ul li .fas {
+    /* Ícone de check para li */
     color: var(--primary-color);
     position: absolute;
     left: 0;
@@ -408,7 +460,8 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    max-width: 1000px; /* Largura para a grade de projetos */
+    max-width: 1000px;
+    /* Largura para a grade de projetos */
     margin: 0 auto;
 }
 
@@ -430,7 +483,8 @@ a:hover {
 
 .project-card img {
     width: 100%;
-    height: 220px; /* Altura da imagem do projeto */
+    height: 220px;
+    /* Altura da imagem do projeto */
     object-fit: cover;
     border-bottom: 1px solid var(--border-color);
 }
@@ -460,7 +514,8 @@ a:hover {
 .project-links {
     display: flex;
     gap: 15px;
-    margin-top: auto; /* Empurra os botões para baixo */
+    margin-top: auto;
+    /* Empurra os botões para baixo */
 }
 
 .btn {
@@ -594,21 +649,26 @@ a:hover {
 
 /* --- Responsividade (Media Queries) --- */
 @media (min-width: 769px) {
+
     /* Em telas maiores, o hero-section continua flex-row */
     .hero-content-wrapper {
-        flex-direction: row; 
+        flex-direction: row;
         text-align: left;
         align-items: flex-start;
     }
+
     .hero-image {
-        margin-right: 40px; 
+        margin-right: 40px;
     }
+
     .hero-info h1 {
-        font-size: 4em; 
+        font-size: 4em;
     }
+
     .hero-info .tagline {
         font-size: 1.6em;
     }
+
     .social-links-hero {
         text-align: left;
     }
@@ -619,16 +679,21 @@ a:hover {
     .nav-links {
         gap: 25px;
     }
+
     .section-padded {
         padding: 60px 20px;
     }
+
     .section-header h2 {
         font-size: 2.2em;
     }
-    .skills-grid, .projects-grid {
+
+    .skills-grid,
+    .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
     }
+
     .project-card img {
         height: 180px;
     }
@@ -638,48 +703,60 @@ a:hover {
     .navbar {
         padding: 15px 20px;
     }
+
     .nav-links {
-        display: none; /* Esconde links em mobile */
+        display: none;
+        /* Esconde links em mobile */
         flex-direction: column;
         width: 100%;
         background-color: var(--bg-medium);
         position: absolute;
-        top: 65px; /* Altura do navbar */
+        top: 65px;
+        /* Altura do navbar */
         left: 0;
         padding: 20px 0;
         border-top: 1px solid var(--border-color);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
+
     .nav-links.active {
         display: flex;
     }
+
     .nav-links li {
         text-align: center;
         margin: 10px 0;
     }
+
     .nav-links a {
         padding: 10px 0;
         font-size: 1.1em;
         width: 100%;
         display: block;
     }
+
     .hamburger {
-        display: block; /* Mostra o hambúrguer */
+        display: block;
+        /* Mostra o hambúrguer */
     }
 
     .hero-section {
         padding: 60px 20px;
     }
+
     .hero-image img {
         width: 150px;
         height: 150px;
     }
+
     .hero-info h1 {
         font-size: 3em;
     }
+
     .hero-info .tagline {
         font-size: 1.3em;
     }
+
     .social-links-hero a {
         font-size: 1.5em;
     }
@@ -687,58 +764,78 @@ a:hover {
     .section-padded {
         padding: 50px 15px;
     }
+
     .section-header h2 {
         font-size: 2em;
     }
+
     .section-header p {
         font-size: 1em;
     }
+
     .content-center p {
         font-size: 0.95em;
     }
-    .skills-grid, .projects-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-        max-width: 400px; /* Limita largura do card */
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas menores */
+        max-width: 400px;
+        /* Limita largura do card */
         margin: 0 auto;
     }
+
     .experience-item {
         padding: 25px;
     }
+
     .experience-item h3 {
         font-size: 1.5em;
     }
+
     .project-card img {
         height: 160px;
     }
+
     .project-info h3 {
         font-size: 1.6em;
     }
+
     .project-links {
         flex-direction: column;
         gap: 10px;
     }
+
     .btn {
         width: 100%;
         text-align: center;
     }
+
     .contact-form {
         padding: 30px;
     }
+
     .form-group label {
         font-size: 0.95em;
     }
-    .form-group input, .form-group textarea {
+
+    .form-group input,
+    .form-group textarea {
         padding: 12px;
         font-size: 0.95em;
     }
+
     .submit-btn {
         padding: 14px;
         font-size: 1em;
     }
+
     .footer-content {
         flex-direction: column;
         gap: 15px;
     }
+
     .footer-social-links a {
         font-size: 1.3em;
     }
@@ -748,37 +845,51 @@ a:hover {
     .navbar {
         padding: 10px 15px;
     }
+
     .hero-section {
         padding: 40px 15px;
     }
+
     .hero-image img {
         width: 120px;
         height: 120px;
     }
+
     .hero-info h1 {
         font-size: 2.5em;
     }
+
     .hero-info .tagline {
         font-size: 1.1em;
     }
+
     .social-links-hero a {
         font-size: 1.3em;
     }
+
     .section-padded {
         padding: 40px 15px;
     }
+
     .section-header h2 {
         font-size: 1.8em;
     }
-    .skill-category, .experience-item, .project-card, .contact-form {
+
+    .skill-category,
+    .experience-item,
+    .project-card,
+    .contact-form {
         padding: 20px;
     }
+
     .project-card img {
         height: 140px;
     }
+
     .project-info h3 {
         font-size: 1.4em;
     }
+
     .footer {
         padding: 25px 15px;
     }
